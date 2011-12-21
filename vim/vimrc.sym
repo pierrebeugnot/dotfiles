@@ -1,0 +1,37 @@
+set encoding=utf-8		  " encoding charset
+set nocompatible		  "
+
+"
+" text formatting
+"
+set autoindent			  " automatic indent new lines
+set smartindent			  " smart auto indent
+set nowrap			  " do not wrap lines
+"set softtabstop=2		  " a tab is 2 spaces
+""set shiftwidth=2		  "
+"set expandtab			  " use spaces not tabs
+set backspace=indent,eol,start	  " backspace through everything in insert mode
+
+"
+" Searching
+"
+set hlsearch			  " highlight matches
+set incsearch			  " incremental searching
+set ignorecase			  " searches are case insensitive ...
+set smartcase			  " ... unless they contain at least one capital letter
+
+"
+" mapping
+"
+let mapleader=','		  " lead
+inoremap jj <ESC>		  " exit to normal mode	
+
+"
+" UI
+"
+syntax enable			  " syntax color 
+set colorcolumn=80		  " 80 car. rule
+set number			  " line numbers
+set relativenumber		  " show distance from current line
+color molokai			  " color scheme
+set guifont=inconsolata\ 12	  "font
