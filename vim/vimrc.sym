@@ -1,5 +1,6 @@
 set encoding=utf-8		  " encoding charset
 set nocompatible		  "
+filetype plugin on 
 
 "
 " text formatting
