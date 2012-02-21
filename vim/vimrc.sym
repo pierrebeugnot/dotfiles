@@ -1,6 +1,11 @@
+"
+" general  
+"
 set encoding=utf-8		  " encoding charset
-set nocompatible		  "
+set nocompatible		  " Use Vim settings instead of Vi settings
 filetype plugin on 
+set history=50
+set laststatus=2		  " always show the status line
 
 "
 " text formatting
@@ -8,9 +13,9 @@ filetype plugin on
 set autoindent			  " automatic indent new lines
 set smartindent			  " smart auto indent
 set nowrap			  " do not wrap lines
-"set softtabstop=2		  " a tab is 2 spaces
-""set shiftwidth=2		  "
-"set expandtab			  " use spaces not tabs
+set softtabstop=2		  " a tab is 2 spaces
+set shiftwidth=2		  "
+set expandtab			  " use spaces not tabs
 set backspace=indent,eol,start	  " backspace through everything in insert mode
 
 "
@@ -26,6 +31,22 @@ set smartcase			  " ... unless they contain at least one capital letter
 "
 let mapleader=','		  " lead
 inoremap jj <ESC>		  " exit to normal mode	
+" sane movement with wrap turned on
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
+" emacs movement keybindings in insert mode
+imap <C-a> <C-o>0
+imap <C-e> <C-o>$
+map <C-e> $
+map <C-a> 0
 
 "
 " UI
@@ -34,8 +55,7 @@ syntax enable			  " syntax color
 set colorcolumn=80		  " 80 car. rule
 set number			  " line numbers
 set relativenumber		  " show distance from current line
-color molokai			  " color scheme
-set guifont=inconsolata\ 12	  "font
+
 
 
 "
@@ -50,3 +70,11 @@ set noswapfile
 "
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,.DS_Store     	" Linux/MacOSX
 set wildignore+=.git\*,.hg\*,.svn\*,*.dll,*.exe    		" Windows
+
+""
+function! StripWhitespace ()
+    exec ':%s/ \+$//g'
+  "exec ':%s/\s\+$//g'
+endfunction
+map ,s :call StripWhitespace ()<CR>
+
