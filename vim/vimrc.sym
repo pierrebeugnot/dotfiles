@@ -6,6 +6,7 @@ set nocompatible		  " Use Vim settings instead of Vi settings
 filetype plugin on 
 set history=50
 set laststatus=2		  " always show the status line
+set noeb vb t_vb=                 " disable error bell
 
 "
 " text formatting
