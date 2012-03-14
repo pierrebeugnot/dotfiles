@@ -100,9 +100,63 @@ snippet html
 	${1}
 	</html>
 snippet xhtml
-	<html xmlns="http://www.w3.org/1999/xhtml">
-	${1}
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <title></title>
+
+	    <link rel="stylesheet" media="screen" href="style.css" />
+
+	    <style type="text/css" media="screen">
+	      /* Feuille de styles interne */
+	    </style>
+
+	    <script type="text/javascript" src="script.js"></script>
+
+	    <script type="text/javascript">
+	      // Script interne
+	    </script>
+
+	    <meta name="description" content="" />
+	</head>
+	<body>
+
+	    <!-- Document -->
+
+	</body>
 	</html>
+snippet html5
+	<!DOCTYPE html>
+
+	<html lang="en">
+	  <head>
+	      <meta charset="UTF-8">
+
+	      <title></title>
+
+	      <link rel="stylesheet" media="screen" href="style.css">
+
+	      <style media="screen">
+	       /* Feuille de styles interne */
+	      </style>
+
+	      <script src="script.js"></script>
+
+	      <script>
+	       // Script interne
+	      </script>
+
+	      <meta name="description" content="">
+	  </head>
+	  <body>
+
+	  <!-- Document -->
+
+	  </body>
+	  </html>
 snippet body
 	<body>
 		${1}
