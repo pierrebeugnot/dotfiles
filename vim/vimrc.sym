@@ -56,7 +56,8 @@ syntax enable			  " syntax color
 set colorcolumn=80		  " 80 car. rule
 set number			  " line numbers
 set relativenumber		  " show distance from current line
-
+set showmatch                     " show brackets/braces matches
+set mat=5                         " show braces duration (1/10 sec)
 
 
 "
@@ -78,4 +79,13 @@ function! StripWhitespace ()
   "exec ':%s/\s\+$//g'
 endfunction
 map ,s :call StripWhitespace ()<CR>
+
+"" Bracket &co matching
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {{     {
+inoremap {}     {}
+
+inoremap        (  ()<Left>
+inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 
