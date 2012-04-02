@@ -5,8 +5,9 @@ set guioptions-=m		    	" remove menu bar
 set guioptions-=T		    	" remove toolbar
 set lines=55 columns=100	    	" 
 
-"color molokai			   	" color scheme
-color wombat                            " color scheme
-set guifont=inconsolata\ 12		"font
+color molokai			   	" color scheme
+"color wombat                            " color scheme
+"set guifont=inconsolata\ 12		"font
+set guifont=monaco:h11		        "font
 
-set vb t_vb=                            " disable visual bell
+"set vb t_vb=                            " disable visual bell
