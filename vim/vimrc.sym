@@ -11,6 +11,11 @@ call pathogen#helptags()
 syntax on                           		" syntax highlighing
 filetype on                          		" try to detect filetypes
 filetype plugin indent on    			" enable loading indent file for filetype
+
+"
+" folding
+" use 'za' to fold/unfold
+"
 set foldmethod=indent				" folding method
 set foldlevel=99				" folding level
 
@@ -30,11 +35,21 @@ vnoremap <Down> gj
 vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
+" window movement
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
 " emacs movement keybindings in insert mode
 imap <C-a> <C-o>0
 imap <C-e> <C-o>$
 map <C-e> $
 map <C-a> 0
+" find todo / fixme keybinding
+map <leader>td <Plug>TaskList 		
+"
+map <leader>g :GundoToggle<CR>
 
 "
 " Handle swap / backup files 
@@ -42,3 +57,34 @@ map <C-a> 0
 set nobackup
 set nowritebackup
 set noswapfile
+
+" Pyflakes
+let g:pyflakes_use_quickfix = 0
+
+" Pep8
+let g:pep8_map='<leader>8' "mapping for pep8
+
+" Tab completion
+au FileType python set omnifunc=pythoncomplete#Complete
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt=menuone,longest,preview
+
+" Fuzzy text file search
+" " <leader>t fuzzy text matching in project
+" " <leader>b fuzzy text matching in open buffer
+
+" Nerdtree
+map <leader>n :NERDTreeToggle<CR>
+
+" Rope
+map <leader>j :RopeGotoDefinition<CR>
+map <leader>r :RopeRename<CR>
+
+" Searching
+nmap <leader>a <Esc>:Ack!
+
+" Git
+%{fugitive#statusline()}
+
+" TODO
+" 	test integration and following
