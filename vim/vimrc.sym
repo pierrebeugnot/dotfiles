@@ -1,0 +1,44 @@
+"
+" pathogen config
+"
+filetype off
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+"
+" general
+"
+syntax on                           		" syntax highlighing
+filetype on                          		" try to detect filetypes
+filetype plugin indent on    			" enable loading indent file for filetype
+set foldmethod=indent				" folding method
+set foldlevel=99				" folding level
+
+"
+" mapping
+"
+let mapleader=','		  " lead
+inoremap jj <ESC>		  " exit to normal mode	
+" sane movement with wrap turned on
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
+" emacs movement keybindings in insert mode
+imap <C-a> <C-o>0
+imap <C-e> <C-o>$
+map <C-e> $
+map <C-a> 0
+
+"
+" Handle swap / backup files 
+"
+set nobackup
+set nowritebackup
+set noswapfile

@@ -1,0 +1,14 @@
+"
+" UI
+"
+set guioptions-=m		" remove menu bar
+set guioptions-=T		" remove toolbar
+
+set guifont=Ubuntu\ Mono\ 13	" font
+
+" set cursor properties
+highlight Cursor guifg=white guibg=steelblue
+highlight iCursor guifg=white guibg=steelblue
+set gcr=n-c-v:hor10-Cursor-blinkon0
+set gcr=i:ver15-Cursor-blinkwait600-blinkon1600-blinkoff800
+
