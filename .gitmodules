@@ -49,3 +49,9 @@
 [submodule "vim/vim/bundle/ropevim"]
 	path = vim/vim/bundle/ropevim
 	url = https://github.com/sontek/rope-vim.git
+[submodule "vim/vim/bundle/jshint"]
+	path = vim/vim/bundle/jshint
+	url = https://github.com/walm/jshint.vim
+[submodule "vim/vim/bundle/vim-javascript"]
+	path = vim/vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git

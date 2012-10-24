@@ -22,8 +22,10 @@ set foldlevel=99				" folding level
 "
 " mapping
 "
+
 let mapleader=','		  " lead
 inoremap jj <ESC>		  " exit to normal mode	
+
 " sane movement with wrap turned on
 nnoremap j gj
 nnoremap k gk
@@ -35,6 +37,7 @@ vnoremap <Down> gj
 vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
+
 " window movement
 map <c-j> <c-w>j
 map <c-k> <c-w>k
@@ -46,6 +49,7 @@ imap <C-a> <C-o>0
 imap <C-e> <C-o>$
 map <C-e> $
 map <C-a> 0
+
 " find todo / fixme keybinding
 map <leader>td <Plug>TaskList 		
 "
@@ -58,17 +62,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" Pyflakes
-let g:pyflakes_use_quickfix = 0
-
-" Pep8
-let g:pep8_map='<leader>8' "mapping for pep8
-
-" Tab completion
-au FileType python set omnifunc=pythoncomplete#Complete
-let g:SuperTabDefaultCompletionType = "context"
-set completeopt=menuone,longest,preview
-
 " Fuzzy text file search
 " " <leader>t fuzzy text matching in project
 " " <leader>b fuzzy text matching in open buffer
@@ -76,15 +69,15 @@ set completeopt=menuone,longest,preview
 " Nerdtree
 map <leader>n :NERDTreeToggle<CR>
 
-" Rope
-map <leader>j :RopeGotoDefinition<CR>
-map <leader>r :RopeRename<CR>
-
 " Searching
 nmap <leader>a <Esc>:Ack!
 
 " Git
-%{fugitive#statusline()}
+" NOT WORKING 
+"%{fugitive#statusline()}
 
 " TODO
 " 	test integration and following
+"
+"
+map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
