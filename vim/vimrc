@@ -1,0 +1,107 @@
+""
+"" Vim config files
+"" pierrebeugnot@gmail.com
+"" 
+
+"" 
+"" Resources: 
+""
+" http://www.guckes.net/vim/setup.html
+
+
+""
+"" Vundle
+""
+set nocompatible "we don't need to be vi compatible
+filetype off "needed here by vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+
+
+""
+"" Vundle bundles
+""
+Bundle 'https://github.com/scrooloose/nerdtree'
+
+
+
+""
+"" General
+""
+let mapleader = ","
+filetype off
+set encoding=utf-8
+set scrolloff=3
+set autoindent "Automatic indentation
+set showmode
+set showcmd
+set hidden "Allows hiding buffers even though they contain modifications which have not yet been written back to the associated file
+set wildmenu
+set wildmode=list:longest
+set visualbell
+" set cursorline
+set ttyfast
+" set ruler
+set backspace=indent,eol,start
+set laststatus=2
+set relativenumber
+" set undofile
+
+" Long lines
+set wrap
+set textwidth=79 " width of the line
+set formatoptions=qrn1
+set colorcolumn=80
+
+
+
+""
+"" Keybord
+""
+
+" remove arrows keys
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+nnoremap j gj
+nnoremap k gk
+
+inoremap jj <ESC> "Escape insert mode with jj
+
+
+
+""
+"" Utils
+""
+"nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR> " strip all trailling spaces
+nnoremap <leader>W :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
+" Handle swap / backup files
+" set nobackup
+" set nowritebackup
+" set noswapfile
+set backupdir=~/.vim_tmp,.
+set directory=~/.vim_tmp,.
+
+
+
+""
+"" Plugins configuration
+""
+map <leader>n :NERDTreeToggle<CR> "Nerdtree ­ open nertree sidetab
+
+
+
+""
+"" Languages & Frameworks
+""
+
+" Golang path
+set runtimepath+=$GOROOT/misc/vim
