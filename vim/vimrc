@@ -97,6 +97,18 @@ set directory=~/.vim_tmp,.
 ""
 map <leader>n :NERDTreeToggle<CR> "Nerdtree ­ open nertree sidetab
 
+" Scratch buffer
+command! ScratchToggle call ScratchToggle()
+function! ScratchToggle()
+	if exists("w:is_scratch_window")
+		unlet w:is_scratch_window
+		exec "q"
+	else
+		exec "normal! :Sscratch\<cr>\<C-W>L"
+		let w:is_scratch_window = 1
+	endif
+endfunction
+nnoremap <silent> <leader><tab> :ScratchToggle<cr> "Scratch buffer
 
 
 ""
