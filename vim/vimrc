@@ -23,6 +23,7 @@ call vundle#rc()
 "" Vundle bundles
 ""
 Bundle 'https://github.com/scrooloose/nerdtree'
+Bundle 'https://github.com/chase/vim-ansible-yaml'
 
 
 
@@ -73,7 +74,7 @@ inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
-inoremap jj <ESC> "Escape insert mode with jj
+inoremap jj <ESC> " Escape insert mode with jj
 
 
 
@@ -95,7 +96,7 @@ set directory=~/.vim_tmp,.
 ""
 "" Plugins configuration
 ""
-map <leader>n :NERDTreeToggle<CR> "Nerdtree ­ open nertree sidetab
+map <leader>n :NERDTreeToggle<CR> " Nerdtree ­ open nertree sidetab
 
 " Scratch buffer
 command! ScratchToggle call ScratchToggle()
@@ -108,7 +109,7 @@ function! ScratchToggle()
 		let w:is_scratch_window = 1
 	endif
 endfunction
-nnoremap <silent> <leader><tab> :ScratchToggle<cr> "Scratch buffer
+nnoremap <silent> <leader><tab> :ScratchToggle<cr> " Scratch buffer
 
 
 ""
