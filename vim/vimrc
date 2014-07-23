@@ -24,6 +24,7 @@ call vundle#rc()
 ""
 Bundle 'https://github.com/scrooloose/nerdtree'
 Bundle 'https://github.com/chase/vim-ansible-yaml'
+Plugin 'fatih/vim-go'
 
 
 
