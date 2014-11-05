@@ -1,0 +1,15 @@
+
+set guioptions-=r
+set guioptions-=L
+set guioptions-=m
+set guioptions-=T
+
+set guifont=Inconsolata\ 12
+
+colors Tomorrow-Night
+
+highlight Cursor guifg=white guibg=steelblue
+highlight iCursor guifg=white guibg=steelblue
+set gcr=n-c-v:hor10-Cursor-blinkon0
+set gcr=i:ver15-Cursor-blinkwait600-blinkon1600-blinkoff800
+:hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white

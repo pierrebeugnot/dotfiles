@@ -49,7 +49,9 @@ filetype plugin indent on    " required
 " General
 "
 let mapleader = ","
-
+set expandtab
+set shiftwidth=2
+set softtabstop=2
 
 "
 " Keyboard
